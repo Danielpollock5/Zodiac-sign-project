@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
 	<!--=============== Animate CSS ================-->
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<!--============== Font Awesome ================-->
 	<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<!--============== GOOGLE font =================-->
@@ -23,35 +24,40 @@
 </head>
 <body>
 	<!-- video install -->
-	<div class="video-background">
-    <div class="video-foreground">
-      <iframe src="https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </div>
 
-<div id="vidtop-content">
-<div class="vid-info">
-	
-	 <a href="/500/Use-YouTube-Videos-as-Fullscreen-Web-Page-Backgrounds"></a>
-  </div>
+<div class="vid-info"> -->
+	<div class="fullscreen-bg">
+    <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+       <!--  <source src="video/zodiac.mp4" type="video/webm"> -->
+        <source src="video/zodiac.mp4" type="video/mp4">
+       <!--  <source src="video/zodiac.ogv" type="video/ogg"> -->
+    </video>
+
 </div>
 <!-- video install -->
-	<div>
+	<div class="container text-center">
+			
 				<div class="container text-center">
-						<h1 id="header">Check Out Your Horoscope!</h1>
+						<h1 class="animated flipInX" id="header">Check Out Your Horoscope!</h1>
 							<!-- input box -->
 						<input type="text" id="signInput" placeholder="Enter your Sign!">
 							<!-- button for the sign -->
 							<br>
-						<button class="btn-warning" id="sign" onclick="getInfo()">Find the Info!</button>
+						<button class="animated bounce btn-default" id="sign" onclick="getInfo()">Find the Info!</button>
 				</div>
 
 				
-					<div class="text-center header" id="userSign"></div>
+		<div class="text-center container">
+			<div class="animated bounce">
+					<div class="animated fadeIn" id="userSign"></div>
+			</div>
 					<!-- this is where the img to the horoscope will be (div) -->
 					<div class="text-center"><img id="horoImg" src=""></div>
 					<!-- The info about the Sign will be placed in here -->
 					<div class="text-center" id="info"></div>
+					<!-- positive things about the signs -->
+					<!-- <div id="positive"></div>
+					<div id="negative"></div> -->
 
 
 	</div>
@@ -64,7 +70,7 @@
 <!-- ================Bootstrap==================-->
 <!-- <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script> -->
 <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
-<!-- script for particles? -->
+
 
 
 <script src="bootstrap/js/bootstrap.min.js"></script>
